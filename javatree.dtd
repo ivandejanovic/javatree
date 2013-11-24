@@ -1,0 +1,4 @@
+<!ELEMENT JavaTreeXML (Node)>
+<!ELEMENT Node (Title, Text, Node*)>
+<!ELEMENT Title (#PCDATA)>
+<!ELEMENT Text (#PCDATA)>
