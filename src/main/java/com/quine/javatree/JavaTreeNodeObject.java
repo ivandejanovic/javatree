@@ -1,9 +1,9 @@
 /**
  * The MIT License (MIT)
- * 
- * Copyright 2008-2013 Quine Interactive and other contributors
+ *
+ * Copyright 2008-2014 Ivan Dejanovic and Quine Interactive
  * www.quineinteractive.com
- * 
+ *
  * Permission is hereby granted, free of charge, to any person obtaining
  * a copy of this software and associated documentation files (the
  * "Software"), to deal in the Software without restriction, including
@@ -11,10 +11,10 @@
  * distribute, sublicense, and/or sell copies of the Software, and to
  * permit persons to whom the Software is furnished to do so, subject to
  * the following conditions:
- * 
+ *
  * The above copyright notice and this permission notice shall be
  * included in all copies or substantial portions of the Software.
- * 
+ *
  * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
  * EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
  * MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
@@ -27,77 +27,73 @@
 package com.quine.javatree;
 
 /**
- * JavaTreeNodeObject is a POJO class used as object property of
- * DefaultMutableTreeNode in JavaTree application.
+ * JavaTreeNodeObject is a POJO class used as object property of DefaultMutableTreeNode in JavaTree application.
  * 
  * @author Ivan Dejanovic
+ * 
+ * @version 1.0
+ * 
+ * @since 1.0
  * 
  */
 
 public class JavaTreeNodeObject {
+    private String title;
+    private String text;
 
-	private String title;
-	private String text;
+    /**
+     * Creates JavaTreeNodeObject and initialize title to "New Node", text to empty string.
+     */
+    public JavaTreeNodeObject() {
+        title = "New Node";
+        text = "";
+    }
 
-	/**
-	 * Creates JavaTreeNodeObject and initialize title to "New Node", text to
-	 * empty string.
-	 */
-	public JavaTreeNodeObject() {
+    /**
+     * Creates JavaTreeNodeObject and initialize title to title, text to empty string.
+     * 
+     * @param title the node title
+     */
+    public JavaTreeNodeObject(String title) {
+        this.title = title;
+        text = "";
+    }
 
-		title = "New Node";
-		text = "";
-	}
+    /**
+     * @return title
+     */
+    public String getTitle() {
+        return title;
+    }
 
-	/**
-	 * Creates JavaTreeNodeObject and initialize title to title, text to empty
-	 * string.
-	 * 
-	 * 
-	 * @param title
-	 */
-	public JavaTreeNodeObject(String title) {
+    /**
+     * @param title
+     */
+    public void setTitle(String title) {
+        this.title = title;
+    }
 
-		this.title = title;
-		text = "";
-	}
+    /**
+     * @return text
+     */
+    public String getText() {
+        return text;
+    }
 
-	/**
-	 * @return title
-	 */
-	public String getTitle() {
-		return title;
-	}
+    /**
+     * @param text
+     */
+    public void setText(String text) {
+        this.text = text;
+    }
 
-	/**
-	 * @param title
-	 */
-	public void setTitle(String title) {
-		this.title = title;
-	}
-
-	/**
-	 * @return text
-	 */
-	public String getText() {
-		return text;
-	}
-
-	/**
-	 * @param text
-	 */
-	public void setText(String text) {
-		this.text = text;
-	}
-
-	/**
-	 * Method used by JTree class to show Node from a model. Implemented using
-	 * getTitle method.
-	 * 
-	 * @return title
-	 */
-	@Override
-	public String toString() {
-		return getTitle();
-	}
+    /**
+     * Method used by JTree class to show Node from a model. Implemented using getTitle method.
+     * 
+     * @return title
+     */
+    @Override
+    public String toString() {
+        return getTitle();
+    }
 }

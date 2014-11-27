@@ -1,9 +1,9 @@
 /**
  * The MIT License (MIT)
- * 
- * Copyright 2008-2013 Quine Interactive and other contributors
+ *
+ * Copyright 2008-2014 Ivan Dejanovic and Quine Interactive
  * www.quineinteractive.com
- * 
+ *
  * Permission is hereby granted, free of charge, to any person obtaining
  * a copy of this software and associated documentation files (the
  * "Software"), to deal in the Software without restriction, including
@@ -11,10 +11,10 @@
  * distribute, sublicense, and/or sell copies of the Software, and to
  * permit persons to whom the Software is furnished to do so, subject to
  * the following conditions:
- * 
+ *
  * The above copyright notice and this permission notice shall be
  * included in all copies or substantial portions of the Software.
- * 
+ *
  * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
  * EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
  * MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
@@ -26,49 +26,44 @@
  */
 package com.quine.javatree;
 
-import java.awt.event.ActionEvent;
-import javax.swing.AbstractAction;
-import javax.swing.Action;
 import javax.swing.JFrame;
-import javax.swing.JMenu;
-import javax.swing.JMenuBar;
-import javax.swing.JMenuItem;
-import javax.swing.JTree;
-import javax.swing.event.TreeSelectionEvent;
-import javax.swing.event.TreeSelectionListener;
-import javax.swing.tree.TreePath;
 
 /**
- * JavaTreeFrame class extends JFrame class and is responsible for containing
- * all GUI elements of JavaTree application.
+ * JavaTreeFrame class extends JFrame class and is responsible for containing all GUI elements of JavaTree application.
  * 
  * @author Ivan Dejanovic
+ * 
+ * @version 1.0
+ * 
+ * @since 1.0
  * 
  */
 
 public class JavaTreeFrame extends JFrame {
-	// main application controller
-	JavaTreeController controller;
+    private static final long serialVersionUID = 7499078909170382541L;
 
-	// static dimensions of the frame
-	private final static int WIDTH = 400;
-	private final static int HEIGHT = 300;
+    // main application controller
+    JavaTreeController        controller;
 
-	/**
-	 * Creates and setup TreeLineFrame
-	 */
-	public JavaTreeFrame() {
-		// create and set frame
-		setTitle("JavaTree");
-		setSize(WIDTH, HEIGHT);
+    // static dimensions of the frame
+    private final static int  WIDTH            = 400;
+    private final static int  HEIGHT           = 300;
 
-		// create controller
-		controller = new JavaTreeController(this);
+    /**
+     * Creates and setup TreeLineFrame
+     */
+    public JavaTreeFrame() {
+        // create and set frame
+        setTitle("JavaTree");
+        setSize(WIDTH, HEIGHT);
 
-		// set panel
-		setContentPane(controller.getPanel());
+        // create controller
+        controller = new JavaTreeController(this);
 
-		// set JMenuBar
-		setJMenuBar(controller.getMenuBar());
-	}
+        // set panel
+        setContentPane(controller.getPanel());
+
+        // set JMenuBar
+        setJMenuBar(controller.getMenuBar());
+    }
 }
