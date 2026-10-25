@@ -2,9 +2,11 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "type": "jdk",
+            "type": "java",
             "request": "launch",
-            "name": "Debug JavaTree"
+            "name": "Debug JavaTree",
+            "mainClass": "com.quine.javatree.JavaTree",
+            "projectName": "javatree"
         }
     ]
 }
